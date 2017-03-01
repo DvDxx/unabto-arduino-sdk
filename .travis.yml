@@ -7,4 +7,5 @@ script:
   - mkdir cibuild
   - cd cibuild
   - cmake -DBOARD=MEGA -DCMAKE_TOOLCHAIN_FILE=`pwd`/../demo/toolchain.cmake ../demo && make -j VERBOSE=1
+  - make
   - avr-size main.elf
