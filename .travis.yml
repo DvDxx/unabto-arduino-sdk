@@ -1,8 +1,18 @@
 language: c
-before_install:
-  - sudo apt-get update -qq
-install:
-  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc cmake 
+before_script:
+  - cmake --version
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
+      - gcc-avr
+      - binutils-avr
+      - avr-libc
+      
 script:
   - mkdir cibuild
   - cd cibuild
