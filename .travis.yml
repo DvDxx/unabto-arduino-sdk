@@ -1,0 +1,10 @@
+language: c
+before_install:
+  - sudo apt-get update -qq
+install:
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc cmake 
+script:
+  - mkdir cibuild
+  - cd cibuild
+  - cmake -DBOARD=MEGA -DCMAKE_TOOLCHAIN_FILE=`pwd`/../demo/toolchain.cmake ../demo && make -j VERBOSE=1
+  - avr-size main.elf
