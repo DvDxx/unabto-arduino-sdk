@@ -1,4 +1,9 @@
+# Build status
+[![Build Status](https://travis-ci.org/nabto/unabto-arduino-sdk.svg?branch=master)](https://travis-ci.org/nabto/unabto-arduino-sdk)
+
 # Arduino example
+
+
 
 This demo shows how to use the nabto request response model on the
 atmel AVR platform. The demos has been made such that they can be executed on the Arduino MEGA boards with the Wiznet W5100 ethernet shield. (Ethernet module version 1).
